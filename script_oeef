@@ -18,8 +18,8 @@ matplotlib.rc('font', **font)
 # distance to the larger distance (i.e scan from 1.0 Angstroms to 2.0 Angstroms and
 # not vice versa)
 
-data=np.loadtxt('scan_final_grid.txt')
-# data=np.flip(data,axis=0)
+data=np.loadtxt('input.txt')
+
 
 
 # in "step_x" and "step_y" I store the size of the step in each direction
