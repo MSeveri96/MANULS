@@ -8,7 +8,7 @@ This simple repository contains the script used to find the Optimal External Ele
 
 This first version of the code works with 2-D scans of the potential energy surface.
 
-##Prerequisites
+## Prerequisites
 The script has been tested with:
 1. Python 3.8
 2. Numpy 1.19.5
