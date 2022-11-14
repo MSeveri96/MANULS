@@ -10,4 +10,4 @@ This first version of the code works with 2-D scans of the potential energy surf
 
 ## Preparation of the input
 
-The data need to be grouped in a simple text file
+The data need to be grouped in a simple text file which contains the following:
