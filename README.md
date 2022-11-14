@@ -8,6 +8,13 @@ This simple repository contains the script used to find the Optimal External Ele
 
 This first version of the code works with 2-D scans of the potential energy surface.
 
+##Prerequisites
+The script has been tested with:
+1. Python 3.8
+2. Numpy 1.19.5
+3. Scipy 1.9.3
+4. Matplotlib 3.3.4 (optional)
+
 ## Preparation of the input
 ( These are some general guidelines, in the follwing sections there is a detailed discussion of the example)
 
@@ -20,4 +27,4 @@ The data need to be grouped in a simple text file which contains the following:
 
 ## Preparation of the script
 
-The preparation of the script is minimal: the user just need to modify the step size and the number of points of the grid. (The step size must be constant in the calculation).
+The preparation of the script is minimal: the user just need to modify the step size and the number of points of the grid. The step size must be constant in the calculation.
