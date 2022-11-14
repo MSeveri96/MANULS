@@ -28,3 +28,8 @@ The data need to be grouped in a simple text file which contains the following:
 ## Preparation of the script
 
 The preparation of the script is minimal: the user just need to modify the step size and the number of points of the grid. The step size must be constant in the calculation.
+
+## Detailed discussion of the example
+
+### Scanning the PES
+
