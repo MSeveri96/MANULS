@@ -1,11 +1,8 @@
-# Briefly speaking, the code works as follows:
+ Briefly speaking, the code works as follows:
  
-# 1) The code reads the data from the files supplied by the user and reshapes the 
-# data in matrices, in this way it is easier to implement the derivaties    
+ 1) The code reads the data from the files supplied by the user and reshapes the data in matrices, in this way it is easier to implement the derivaties.    
  
-# 2) The code generates several points on the unit sphere. The points are generated 
-# using the Fibonacci sphere algorithm. Each point, along with the origin, defines
-# a unit vector. The unit vectors generated are stored and used later.
+2) The code generates several points on the unit sphere. The points are generated using the Fibonacci sphere algorithm. Each point, along with the origin, defines a unit vector. The unit vectors generated are stored and used later.
 
 # 3) The code picks a direction computed in point 2 and calculates the "ingredients"
 # needed for the anaylis.  It computes the first and second deriatives of the dipole,
