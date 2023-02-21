@@ -2,13 +2,11 @@
 
 A program to calculate the external electric field that makes a chemical reaction barrierless.
 
-
-
 This first version of the code works with 1-D and  2-D scans of the potential energy surface.
 
 ## Documentation 
 
-You can find the documentation [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md) or, if you prefer, download a PDF version with this [link]
+You can find the documentation, along with some examples, [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md) or, if you prefer, download a PDF version with this [link]
 
 ## Prerequisites
 The script has been tested with:
@@ -25,5 +23,7 @@ For instance: `pip install numpy matplotlib`
 It is sufficient to download the code and run the script. 
 
 `python oeef_2d.py` or `python oeef_1d.py` depending on the number of variables scanned.
+
+## Citation
 
 
