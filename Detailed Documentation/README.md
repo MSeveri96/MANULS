@@ -13,6 +13,6 @@
 
 4) Maintaining the direction chosen in point 2 the code solves eq XXX of YYY for each point of the grid. The solution of this equation is an amplitude of the electric field. Now we have the amplitude of the field and the direction of the field. The code checks if in this point the pertubed gradient is "close to zero", that is its norm is below a treshold. If this requirement is met, the code proceeds, otherwise it goes back to step 3 and uses a different direction from the set of directions computed in point 2.
 
-5) Now we have a direction of the field, the associated amplitude and we know that the pertubed gradient in this point is reasonably close to zero. A point must satisfy this condition to be a bond-breaking-point, but it is not sufficient condition. Now the code check if the two other conditions are satisfied.
+5) Now we have a direction of the field, the associated amplitude and we know that the pertubed gradient in this point is reasonably close to zero. A point must satisfy this condition to be a bond-breaking-point, but it is not sufficient condition. Now the code checks if the two other conditions are satisfied.
 
 
