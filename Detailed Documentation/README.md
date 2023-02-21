@@ -1,4 +1,4 @@
-#Detailed Documentation
+# Detailed Documentation
 
 ## Theoretical Overview 
  
