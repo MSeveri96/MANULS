@@ -1,8 +1,9 @@
 # Detailed Documentation
 
-## Theoretical Overview 
+## Theoretical Background
  
- Briefly speaking, the code works as follows:
+## Code Overview 
+ The code works as follows:
  
 1) The code reads the data from the files supplied by the user and reshapes the data in matrices, in this way it is easier to implement the derivaties.    
 
@@ -14,3 +15,4 @@
 
 5) Now we have a direction of the field, the associated amplitude and we know that the 
 pertubed gradient in this point is reasonably close to zero. 
+
