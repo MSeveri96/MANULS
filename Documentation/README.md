@@ -1,14 +1,19 @@
 # Documentation
 
+## 
+
+
+## Further Details
+
 This section is aimed to the interested user. This section gives just the essential theoretical details and outlines the functioning of the code without loosing too much time in technicalities.
 
 For further details about the theory the user is referred to the papers (xxx yyy) and is encouraged to write to the corresponding author for any further clarifications.  
 
 Regarding how the code works "under the hood" the following sections outiline the basic functioning and the comments in the code explain the remaining details.
 
-## Theoretical Background
+### Theoretical Background
  
-## Code Overview 
+### Code Overview 
  The code works as follows:
  
 1) The code reads the data from the files supplied by the user and reshapes the data in matrices, in this way it is easier to implement the derivaties.    
