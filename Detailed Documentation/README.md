@@ -2,7 +2,7 @@
 
 This section is aimed to the interested user. This section gives just the essential theoretical details and outlines the functioning of the code without loosing too much time in technicalities.
 
-For further details about the theory the user is referred to the papers (xxx yyy) and is encouraged to write to the correspoonding author for any further clarifications.  
+For further details about the theory the user is referred to the papers (xxx yyy) and is encouraged to write to the corresponding author for any further clarifications.  
 
 Regarding how the code works "under the hood" the following sections outiline the basic functioning and the comments in the code explain the remaining details.
 
