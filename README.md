@@ -12,7 +12,8 @@ The script has been tested with:
 2. Numpy 1.19.5
 3. Matplotlib 3.3.4 (optional)
 
-Usually these packages can be installed using the `pip` or `pip3` (for python3) package. 
+Usually the `numpy` and `matplotlib` libraries can be installed using the `pip` or `pip3` (for python3) package. 
+For instance `pip install numpu matplotlib`
 
 ## Preparation of the input
 ( These are some general guidelines, in the follwing sections there is a detailed discussion of the example)
