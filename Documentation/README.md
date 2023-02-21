@@ -1,6 +1,6 @@
 # Documentation
 
-## 
+## Using the Code
 
 
 ## Further Details
