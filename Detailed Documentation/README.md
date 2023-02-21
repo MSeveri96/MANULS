@@ -15,9 +15,9 @@
 
 5) Now we have a direction of the field, the associated amplitude and we know that the pertubed gradient in this point is reasonably close to zero. A point must satisfy this condition to be a bond-breaking-point, but it is not a sufficient condition. To be in the **optimal** bond-breaking-point means that the perturbed gradient is zero, that the sigma function is zero and that the difference between the first and the third term of the sigma function is zero (see eq. xxx in yyy). Now the code checks if the two other conditions are satisfied. 
 
-6) In the point in which the pertubed gradient is zero the code calculates the terms of the sigma function. (see eq. xxx in yyyy) then checks if the sigma function is below a treshold (used defined). If these criterion is met the coordinates of this point, the field and the sigma function terms are stored.
+6) In the point in which the pertubed gradient is zero the code calculates the terms of the sigma function. (see eq. xxx in yyyy) then checks if the sigma function is below a treshold (used defined) and if the difference between the first and the third term of the sigma function is below the same treshold. If these criterion is met the coordinates of this point, the field and the sigma function terms are stored.
 
-7) The code repeats points 3-6 for all the directions generated in point 2. Usually the code finds several bond-breaking-points. 
+7) The code repeats points 3-6 for all the directions generated in point 2. Usually the code finds several candidates for the role of **optimal** bond-breaking point.  
 
 
 
