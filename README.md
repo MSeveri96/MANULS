@@ -13,6 +13,8 @@ The script has been tested with:
 3. Scipy 1.9.3
 4. Matplotlib 3.3.4 (optional)
 
+Usually these packages can be installed using the 'pip'
+
 ## Preparation of the input
 ( These are some general guidelines, in the follwing sections there is a detailed discussion of the example)
 
