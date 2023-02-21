@@ -8,7 +8,7 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 
 ## Documentation 
 
-You can find the documentation [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md)
+You can find the documentation [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md) or, if you prefer, download a PDF version with this [link]
 
 ## Prerequisites
 The script has been tested with:
