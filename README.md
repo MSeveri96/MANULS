@@ -6,6 +6,10 @@ A program to calculate the external electric field that makes a chemical reactio
 
 This first version of the code works with 1-D and  2-D scans of the potential energy surface.
 
+## Documentation 
+
+You can find the documentation [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md)
+
 ## Prerequisites
 The script has been tested with:
 1. Python 3.8
