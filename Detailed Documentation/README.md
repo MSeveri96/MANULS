@@ -19,5 +19,7 @@
 
 7) The code repeats points 3-6 for all the directions generated in point 2. Usually the code finds several candidates for the role of **optimal** bond-breaking point. The code now finds the point that is closest to the optimal bond breaking point between the candidates found in the previous points. The optimal bond-breaking-point is the point in which the sigma function is the smallest.
 
+8) Lastly the code outputs two files: a) "fields_and_bbps.txt" contains all bond-breaking-points found by the code and b) "optimal_field_and_optimal_bbp.txt" contains the optimal field and the optimal bond-breaking-point.
+
 
 
