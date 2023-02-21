@@ -10,10 +10,9 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 The script has been tested with:
 1. Python 3.8
 2. Numpy 1.19.5
-3. Scipy 1.9.3
-4. Matplotlib 3.3.4 (optional)
+3. Matplotlib 3.3.4 (optional)
 
-Usually these packages can be installed using the 'pip'
+Usually these packages can be installed using the `pip` or `pip3`(for python3) package. 
 
 ## Preparation of the input
 ( These are some general guidelines, in the follwing sections there is a detailed discussion of the example)
