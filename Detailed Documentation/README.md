@@ -17,7 +17,7 @@
 
 6) In the point in which the pertubed gradient is zero the code calculates the terms of the sigma function. (see eq. xxx in yyyy) then checks if the sigma function is below a treshold (used defined) and if the difference between the first and the third term of the sigma function is below the same treshold. If these criterion is met the coordinates of this point, the field and the sigma function terms are stored.
 
-7) The code repeats points 3-6 for all the directions generated in point 2. Usually the code finds several candidates for the role of **optimal** bond-breaking point.  
+7) The code repeats points 3-6 for all the directions generated in point 2. Usually the code finds several candidates for the role of **optimal** bond-breaking point. The code now finds the point that is closest to the optimal bond breaking point between the candidates found in the previous points. The optimal bond-breaking-point is the point in which the sigma function is the smallest.
 
 
 
