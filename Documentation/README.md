@@ -1,4 +1,4 @@
-# Detailed Documentation
+# Documentation
 
 This section is aimed to the interested user. This section gives just the essential theoretical details and outlines the functioning of the code without loosing too much time in technicalities.
 
