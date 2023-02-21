@@ -4,7 +4,7 @@ A program to calculate the external electric field that makes a chemical reactio
 
 
 
-This first version of the code works with 2-D scans of the potential energy surface.
+This first version of the code works with 1-D and  2-D scans of the potential energy surface.
 
 ## Prerequisites
 The script has been tested with:
