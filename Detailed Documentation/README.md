@@ -1,5 +1,7 @@
 # Detailed Documentation
 
+This section is aimed to the user interested on how this code works, but without loosing too much time in technicalities.
+
 ## Theoretical Background
  
 ## Code Overview 
