@@ -25,11 +25,12 @@ Usually the `numpy` and `matplotlib` libraries can be installed using the `pip` 
 
 For instance: `pip install numpy matplotlib`
 
-## Installation and Usage
+### Download and Usage
 
-It is sufficient to download the code and run the script. 
+XXX ca be dowloaded using the `git clone` command or using the green button at the top of this page. After pressing the button you can choose "download ZIP", unzip the folder and run the code.
 
-`python oeef_2d.py` or `python oeef_1d.py` depending on the number of variables scanned.
+To run the the code you need to:
+1. 
 
 ## Citation
 
