@@ -1,6 +1,6 @@
 # Optimal External Electric Field
 
-A program to calculate the external electric field that makes a chemical reaction barrierless.
+A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
 
 This first version of the code works with 1-D and  2-D scans of the potential energy surface.
 
