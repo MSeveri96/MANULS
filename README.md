@@ -30,7 +30,10 @@ For instance: `pip install numpy matplotlib`
 XXX ca be dowloaded using the `git clone` command or using the green button at the top of this page. After pressing the button you can choose "download ZIP", unzip the folder and run the code.
 
 To run the the code you need to:
-1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md) )
+1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md))
+2. Unzip a directory of your choice
+3. Modify the file xxx.py and yyy.py files putting the correct location of the files containing your data
+4. Run the code with `python3 xxxx.py` or `python xxx.py`
 
 
 ## Citation
