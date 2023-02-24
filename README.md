@@ -48,3 +48,5 @@ To run the the code you need to:
 ## Citation
 
 ## Questions?
+
+If anything about the code is unclear you are encouraged to post in the [Discussion] section, if you find a bug in the code you can post in the [issues section]. Another way to reach us is to write to 
