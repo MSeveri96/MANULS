@@ -39,7 +39,9 @@ To run the the code you need to:
  
  The code produces two files: `optimal_field_and_optimal_bbp.txt` and `fields_and_bbps.txt`.
  
- `optimal_field_and_optimal_bbp.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field.
+ `optimal_field_and_optimal_bbp.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, along with other data to control the quality of the result. It also contains four "sub-optimal" fields and "sub-optimal" bond breaking points. These "sub-optimal" values are not optimal but close to the optimality. 
+ 
+ `fields_and_bbps.txt` is mainly for the interested user and for debugging purposes. 
  
  
 
