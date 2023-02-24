@@ -37,7 +37,7 @@ To run the the code you need to:
 
 ### Output
  
- The code produces two files 
+ The code produces two files: `optimal_field_and_optimal_bbp.txt` and `fields_and_bbps.txt`
 
 ## Citation
 
