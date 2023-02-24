@@ -9,3 +9,4 @@ cut -d " " -f 10- tmp.txt > dipole.txt
 paste $1.relaxscanact.dat dipole.txt > $1_grid.txt
 
 rm tmp.txt dipole.txt
+
