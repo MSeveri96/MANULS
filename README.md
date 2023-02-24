@@ -49,4 +49,4 @@ To run the the code you need to:
 
 ## Questions?
 
-If anything about the code is unclear you are encouraged to post in the [Discussion] section or to write to the maintainer of this repository (marco.severi6@unibo.it). Every comment, question, suggestion is more than welcome!
+If something is unclear or for any kind of question you are encouraged to post in the [Discussion] section or to write to the maintainer of this repository (marco.severi6@unibo.it). Every comment, question or suggestion is more than welcome!
