@@ -36,7 +36,8 @@ To run the the code you need to:
 4. Run the code with `python3 xxxx.py` or `python xxx.py`
 
 ### Output
-
+ 
+ The code produces two files 
 
 ## Citation
 
