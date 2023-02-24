@@ -2,7 +2,7 @@
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
 
-This first version of the code works with 1-D and  2-D scans of the potential energy surface. Two scripts are provided to extract the relevant data from ORCA and Guassian relaxed scan calculations.
+This first version of the code works with 1-D and  2-D scans of the potential energy surface. Two scripts are provided to extract the relevant data from ORCA and Gaussian relaxed scan calculations.
 
 ## Jump-Start Guide 
 
