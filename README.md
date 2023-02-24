@@ -33,7 +33,7 @@ To run the the code you need to:
 1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md)). We provide a script to automatically extract the data from a ORCA calculation.
 2. Unzip in a directory of your choice
 3. Modify the file xxx.py and yyy.py files putting the correct location of the files containing your data
-4. Run the code with `python3 xxxx.py` or `python xxx.py`
+4. Run the code with `python3 xxxx.py` or `python xxx.py`. If you prefer you can run the code in your favorite IDE as well.
 
 ### Output
  
