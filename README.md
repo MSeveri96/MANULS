@@ -31,7 +31,7 @@ XXX can be dowloaded using the `git clone` command or using the green button at 
 
 To run the the code you need to:
 1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md))
-2. Unzip a directory of your choice
+2. Unzip in a directory of your choice
 3. Modify the file xxx.py and yyy.py files putting the correct location of the files containing your data
 4. Run the code with `python3 xxxx.py` or `python xxx.py`
 
