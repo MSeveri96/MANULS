@@ -51,4 +51,4 @@ To run the the code you need to:
 
 If something is unclear or for any kind of question you are encouraged to post in the [Discussion] section or to write to the maintainer of this repository (marco.severi6@unibo.it). Every comment, question or suggestion is more than welcome!
 
-If you spot a bug in the code (thanks!) you can post in the [issues] section or write to the maintainer.
+If you spot a bug in the code (thanks!) you can post in the [Issues section](https://github.com/MSeveri96/PALLAS/issues) or write to the maintainer.
