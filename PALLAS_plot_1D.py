@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 
+
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
@@ -22,15 +23,12 @@ matplotlib.rc('font', **font)
 # This is the only section that needs to be modified, the rest is up to the code
 
 # Loading of the files containing the data, please see the documentation
-
-data=np.loadtxt('/home/marco/huisgen/tzvp/scan_tzvp_grid.txt')
-polar=np.loadtxt('/home/marco/huisgen/tzvp/polarizability_scan_tzvp.txt')
-
+data=np.loadtxt('/home/marco/cumulene/scan_polar_long_grid.txt')
+polar=np.loadtxt('/home/marco/cumulene/scan_polar_long_polarizability.txt')
 
 
 # "pointsx" and "pointsy" = number of points scanned for each variable
-pointsx=int(23)
-pointsy=int(23)
+pointsx=int(37)
 
 #the optimal electric field
 #e=np.array([field_x,  field_y,  field_z])
@@ -52,11 +50,10 @@ e=np.array([-0.00395539,  0.00419754,  0.00640764])
 
 
 
-energy=np.reshape(data[:,2],(pointsy,pointsx),order='F')
-
-dipx=np.reshape(data[:,3],(pointsy,pointsx),order='F')
-dipy=np.reshape(data[:,4],(pointsy,pointsx),order='F')
-dipz=np.reshape(data[:,5],(pointsy,pointsx),order='F')
+energy=data[:,1]
+dipx=data[:,2]
+dipy=data[:,3]
+dipz=data[:,4]
 
 energy_column=data[:,1]
 
@@ -81,29 +78,15 @@ for i in range(int(np.shape(polar)[0]/3)):
     a21=np.append(a21,polar[2+i*3,1])
     a22=np.append(a22,polar[2+i*3,2])
     
-
-a00=np.reshape(a00,(pointsy,pointsx),order='F')
-a01=np.reshape(a01,(pointsy,pointsx),order='F')
-a02=np.reshape(a02,(pointsy,pointsx),order='F')
-a10=np.reshape(a10,(pointsy,pointsx),order='F')
-a11=np.reshape(a11,(pointsy,pointsx),order='F')
-a12=np.reshape(a12,(pointsy,pointsx),order='F')
-a20=np.reshape(a20,(pointsy,pointsx),order='F')
-a21=np.reshape(a21,(pointsy,pointsx),order='F')
-a22=np.reshape(a22,(pointsy,pointsx),order='F')
+    
 
 
 fig=plt.figure()
 x=np.linspace(data[0,0],data[-1,0],num=pointsx)
-y=np.linspace(data[0,1],data[-1,1],num=pointsy)
-levels = 30
-cmap= plt.cm.get_cmap("viridis", levels+1)
-plt.contour(x,y,(energy-np.amin(energy))*627.503,levels,cmap=cmap)
+plt.plot(x,(energy-np.amin(energy))*627.503,marker='o')
 plt.title('Unperturbed PES')
-plt.xlabel(r'Variable 1 Scanned')
-plt.ylabel(r'Variable 2 Scanned')
-cbar=plt.colorbar()
-cbar.set_label('Relative Energy (kcal/mol)')
+plt.xlabel(r'Variable Scanned')
+plt.ylabel(r'Relative Energy (kcal/mol) ')
 plt.show()
          
             
@@ -113,26 +96,20 @@ plt.show()
 
 #####POLARIZABILITY
         
-energy_perturbed=np.zeros((pointsy,pointsx))
+energy_perturbed=np.zeros(pointsx)
 
 
 
 
-print(e)
-for m in range(int(pointsy)):
-    for n in range(int(pointsx)):
-        energy_perturbed[m,n]=energy[m,n]-(dipx[m,n]*e[0]+dipy[m,n]*e[1]+dipz[m,n]*e[2])-(1/2)*e[0]*(e[0]*a00[m,n]+e[1]*a01[m,n]+e[2]*a02[m,n])-(1/2)*e[1]*(e[0]*a10[m,n]+e[1]*a11[m,n]+e[2]*a12[m,n])-(1/2)*e[2]*(e[0]*a20[m,n]+e[1]*a21[m,n]+e[2]*a22[m,n])
 
-
+for g in range(int(pointsx)):
+        energy_perturbed[g]=energy[g]-(dipx[g]*e[0]+dipy[g]*e[1]+dipz[g]*e[2])-(1/2)*e[0]*(e[0]*a00[g]+e[1]*a01[g]+e[2]*a02[g])-(1/2)*e[1]*(e[0]*a10[g]+e[1]*a11[g]+e[2]*a12[g])-(1/2)*e[2]*(e[0]*a20[g]+e[1]*a21[g]+e[2]*a22[g])
 fig=plt.figure()
 x=np.linspace(data[0,0],data[-1,0],num=pointsx)
-y=np.linspace(data[0,1],data[-1,1],num=pointsy)
-levels = 30
-cmap= plt.cm.get_cmap("viridis", levels+1)
-plt.contour(x,y,(energy_perturbed-np.amin(energy))*627.503,levels,cmap=cmap)
+plt.plot(x,(energy_perturbed-np.amin(energy))*627.503,marker='o',color='tab:orange')
 plt.title('Perturbed PES')
-plt.xlabel(r'Variable 1 Scanned')
-plt.ylabel(r'Variable 2 Scanned')
-cbar=plt.colorbar()
-cbar.set_label('Relative Energy (kcal/mol)')
+plt.xlabel(r'Variable Scanned')
+plt.ylabel(r'Relative Energy (kcal/mol)')
 plt.show()
+            
+            
