@@ -1,4 +1,4 @@
-# PALLAS (Perfect electrostAtic cataLysis of chemicaL reActionS) 
+# MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
 
