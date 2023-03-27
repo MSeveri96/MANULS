@@ -1,4 +1,4 @@
-# Optimal External Electric Field
+# PALLAS (Perfect electrostAtic cataLysis of chemicaL reActionS) 
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
 
