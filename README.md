@@ -1,8 +1,8 @@
 # MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
-<img src="/MANULS/MANULS_logo.png" alt="Alt text" title="Optional title">
+
 <div align="center">
-<img src="./MANULS_logo.png" alt="Extended Tight Binding" width="220">
+<img src="./MANULS_logo.png" alt="Extended Tight Binding" width="600">
 </div>
 
 
