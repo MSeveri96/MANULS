@@ -1,6 +1,9 @@
 # MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
 <img src="/MANULS/MANULS_logo.png" alt="Alt text" title="Optional title">
+<div align="center">
+<img src="./MANULS_logo.png" alt="Extended Tight Binding" width="220">
+</div>
 
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
