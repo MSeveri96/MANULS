@@ -1,6 +1,6 @@
 # MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
-![Alt text](/MANULS/MANULS_logo.png "Optional title")
+<img src="/MANULS/MANULS_logo.png" alt="Alt text" title="Optional title">
 
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
