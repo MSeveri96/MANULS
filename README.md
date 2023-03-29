@@ -1,5 +1,8 @@
 # MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
+![alt text](https://github.com/MSeveri96/MANULS//TOC3_c?raw=true)
+
+
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
 
 This first version of the code works with 1-D and  2-D scans of the potential energy surface. A script are provided to extract the relevant data from ORCA (relaxed and unrelaxed) scan calculations.
