@@ -168,6 +168,7 @@ if geometry_reactant_x!=-1000:
                     column_react=int(column)
 
 file_optimal= open("external_electric_fields.txt","w+")
+file_bbps= open("coordinates_bbps.txt","w+")
 
 
 # The code finds the optimal BBP. First it computtes the gradient and the 
@@ -229,24 +230,43 @@ array_for_max_gradient=np.array([])
 for l in range(len(gradient_maxima)):
     norm_gradient=np.linalg.norm(gradient_pes[gradient_maxima[l],:])
     array_for_max_gradient=np.append(array_for_max_gradient,norm_gradient)
+    obbp_idx=indexes[gradient_maxima[l]]
+    obbp_x=int(obbp_idx[1])
+    obbp_y=int(obbp_idx[0])
+    for c in range(len(energy_column)):
+        if energy[obbp_y,obbp_x]==energy_column[c]:
+            print('Geometry of the BBP',file=file_bbps)
+            print('variable 1 =',data[c,0],file=file_bbps)
+            print('variable 2 =',data[c,1],file=file_bbps)
+            print('index BBP =',indexes[gradient_maxima[l]],file=file_bbps)
+            print('norm gradient in this point=',norm_gradient,file=file_bbps)
+            print('gradient in this point',gradient_pes[gradient_maxima[l]],file=file_bbps)
+            print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[l]],file=file_bbps)
+            print('#########',file=file_bbps)
+            print('',file=file_bbps)
+            print('',file=file_bbps)
 
 
-    
+
+
 obbp_idx=indexes[gradient_maxima[np.argmax(array_for_max_gradient)]]
 obbp_x=int(obbp_idx[1])
 obbp_y=int(obbp_idx[0])
+
+
 
 for c in range(len(energy_column)):
     if energy[obbp_y,obbp_x]==energy_column[c]:
         print('Geometry of the optimal BBP',file=file_optimal)
         print('variable 1 =',data[c,0],file=file_optimal)
         print('variable 2 =',data[c,1],file=file_optimal)
-        print('Geometry of the optimal BBP')
-        print('variable 1 =',data[c,0])
-        print('variable 2 =',data[c,1])
+        # print('Geometry of the optimal BBP')
+        # print('variable 1 =',data[c,0])
+        # print('variable 2 =',data[c,1])
 
-exit
+
 print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]],file=file_optimal)
+print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]])
 print('norm original gradient',np.amax(array_for_max_gradient),file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
