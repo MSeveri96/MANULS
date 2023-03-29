@@ -80,6 +80,7 @@ f_tol=5e-5
 m_tol=0.999
 g_pert_tol=5e-5
 energy_tol=-0.0048
+n_bbps=int(5)
 
 indexes=np.zeros(2)
 gradient_pes=np.zeros(2)
@@ -223,7 +224,7 @@ for idx_ge in range(len(indexes)):
         vector_norm_gradient_extr=np.append(vector_norm_gradient_extr,np.linalg.norm(gradient_extremal))
 
 
-gradient_maxima = np.argsort(vector_norm_gradient_extr)[::1][:5]
+gradient_maxima = np.argsort(vector_norm_gradient_extr)[::1][:n_bbps]
 array_for_max_gradient=np.array([])
 
 
