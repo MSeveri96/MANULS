@@ -1,6 +1,6 @@
 # MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
 
-![alt text](https://github.com/MSeveri96/MANULS//TOC3_c?raw=true)
+![alt text](https://github.com/MSeveri96/MANULS//TOC3_c.pdf?raw=true)
 
 
 A program to calculate the lowest possible electric field to make a chemical reaction barrierless.
