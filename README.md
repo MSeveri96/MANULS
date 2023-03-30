@@ -22,11 +22,6 @@ You can find the documentation in PDF format, along with a worked example, [here
 2. Numpy
 3. Matplotlib (optional)
 
-The script has been tested with:
-1. Python 3.8
-2. Numpy 1.19.5
-3. Matplotlib 3.3.4 (optional)
-
 Usually the `numpy` and `matplotlib` libraries can be installed using the `pip` or `pip3` (for python3) package. 
 
 For instance: `pip install numpy matplotlib`
