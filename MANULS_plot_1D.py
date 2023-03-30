@@ -23,8 +23,8 @@ matplotlib.rc('font', **font)
 # This is the only section that needs to be modified, the rest is up to the code
 
 # Loading of the files containing the data, please see the documentation
-data=np.loadtxt('/home/marco/cumulene/scan_polar_long_grid.txt')
-polar=np.loadtxt('/home/marco/cumulene/scan_polar_long_polarizability.txt')
+data=np.loadtxt('/path/to/file_grid.txt')
+polar=np.loadtxt('/path/to/file_polarizability.txt')
 
 
 # "pointsx" and "pointsy" = number of points scanned for each variable
