@@ -28,12 +28,12 @@ For instance: `pip install numpy matplotlib`
 
 ### Download and Usage
 
-XXX can be dowloaded using the `git clone` command or using the green button at the top of this page. After pressing the button you can choose "download ZIP", unzip the folder and run the code.
+MANULS can be dowloaded using the `git clone` command or using the green button at the top of this page. After pressing the button you can choose "download ZIP", unzip the folder and run the code.
 
 To run the the code you need to:
-1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md)). We provide a script to automatically extract the data from a ORCA calculation.
+1. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
 2. Unzip in a directory of your choice.
-3. Modify the file xxx.py and yyy.py files putting the correct location of the files containing your data.
+3. Modify the file MANULS_2D.py or MANULS_1D.py files putting the correct location of the files containing your data and the scan.
 4. Run the code with `python3 xxxx.py` or `python xxx.py`. If you prefer you can run the code in your favorite IDE as well.
 
 ### Output
