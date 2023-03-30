@@ -80,6 +80,8 @@ f_tol=5e-5
 m_tol=0.999
 g_pert_tol=5e-5
 energy_tol=-0.0048
+n_bbps=int(5)
+
 
 indexes=np.array([])
 gradient_pes=np.array([])
@@ -156,6 +158,7 @@ if geometry_reactant_x!=-1000:
            
 
 file_optimal= open("external_electric_fields.txt","w+")
+file_bbps= open("coordinates_bbps.txt","w+")
 
 # The code finds the optimal BBP. First it computtes the gradient and the 
 # hessian for each point of the grid, then it check the gradient extremal 
@@ -191,6 +194,22 @@ array_for_max_gradient=np.array([])
 for l in range(len(gradient_maxima)):
     norm_gradient=gradient_pes[gradient_maxima[l]]
     array_for_max_gradient=np.append(array_for_max_gradient,norm_gradient)
+    obbp_idx=indexes[gradient_maxima[l]]
+    obbp_x=int(obbp_idx)
+    for c in range(len(energy_column)):
+        if energy[obbp_x]==energy_column[c]:
+            print('Geometry of the BBP',file=file_bbps)
+            print('variable 1 =',data[c,0],file=file_bbps)
+            print('index BBP =',indexes[gradient_maxima[l]],file=file_bbps)
+            print('gradient in this point =',gradient_pes[gradient_maxima[l]],file=file_bbps)
+            print('gradient norm in this point =',norm_gradient,file=file_bbps)
+            
+            print('gradient extremal condition =',vector_norm_gradient_extr[gradient_maxima[l]],file=file_bbps)
+            print('#########',file=file_bbps)
+            print('',file=file_bbps)
+            print('',file=file_bbps)
+
+    
     
 obbp_idx=indexes[gradient_maxima[np.argmax(array_for_max_gradient)]]
 obbp_x=int(obbp_idx)
