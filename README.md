@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<img src="./MANULS_logo.png" alt="Extended Tight Binding" width="600">
+<img src="./MANULS_logo.png" alt="Extended Tight Binding" width="1000">
 </div>
 
 
