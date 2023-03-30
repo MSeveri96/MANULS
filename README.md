@@ -39,7 +39,7 @@ To run the the code you need to:
 
 ### Output
  
- The code produces two files: `external_electric_fields.txt` and 'coordinates_bbps.txt`.
+ The code produces two files: `external_electric_fields.txt` and `coordinates_bbps.txt`.
  
 `external_electric_fields.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
