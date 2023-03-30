@@ -2,7 +2,7 @@
 
 
 <div align="center">
-<img src="./MANULS_logo_small.png" alt="MANULS_logo" width="1000">
+<img src="./MANULS_logo_small.png" alt="MANULS_logo" width="1200">
 </div>
 
 
