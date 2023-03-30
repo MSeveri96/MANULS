@@ -1,0 +1,45 @@
+Geometry of the BBP
+variable 1 = 90.0
+index BBP = 18.0
+gradient in this point = -8.920000027501374e-07
+gradient norm in this point = -8.920000027501374e-07
+gradient extremal condition = 3.2240448120221586e-12
+#########
+
+
+Geometry of the BBP
+variable 1 = 50.0
+index BBP = 26.0
+gradient in this point = -0.00012268200000562502
+gradient norm in this point = -0.00012268200000562502
+gradient extremal condition = 3.631387291418896e-11
+#########
+
+
+Geometry of the BBP
+variable 1 = 130.0
+index BBP = 10.0
+gradient in this point = 0.00010301800000434014
+gradient norm in this point = 0.00010301800000434014
+gradient extremal condition = 3.675682251487402e-11
+#########
+
+
+Geometry of the BBP
+variable 1 = 140.0
+index BBP = 8.0
+gradient in this point = 0.00010626099999626604
+gradient norm in this point = 0.00010626099999626604
+gradient extremal condition = 3.965660428184293e-11
+#########
+
+
+Geometry of the BBP
+variable 1 = 175.0
+index BBP = 1.0
+gradient in this point = -1.0880000013457903e-05
+gradient norm in this point = -1.0880000013457903e-05
+gradient extremal condition = 5.6593408138877484e-11
+#########
+
+
