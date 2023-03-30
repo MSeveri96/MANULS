@@ -28,9 +28,8 @@ matplotlib.rc('font', **font)
 
 # Loading of the files containing the data, please see the documentation
 
-data=np.loadtxt('/home/marco/huisgen/tzvp/from_reacts/scan_tzvp_from_reacts_grid.txt')
-polar=np.loadtxt('/home/marco/huisgen/tzvp/from_reacts/polarizability_scan_tzvp_from_reacts.txt')
-
+data=np.loadtxt('/path/to/file_grid.txt')
+polar=np.loadtxt('/path/to/file_polarizability.txt')
 
 # "pointsx" and "pointsy" = number of points scanned for each variable
 pointsx=int(25)
