@@ -43,7 +43,7 @@ To run the the code you need to:
  
 `external_electric_fields.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
-`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf.
+`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf).
 
 We provide the `MANULS_plot_2D.py` and `MANULS_plot_1D.py` scripts to plot the results.
  
@@ -53,6 +53,6 @@ We provide the `MANULS_plot_2D.py` and `MANULS_plot_1D.py` scripts to plot the r
 
 ## Questions?
 
-If something is unclear or for any kind of question you are encouraged to write to the maintainer of this repository (marco.severi6@unibo.it) or to post in the [Discussions section](https://github.com/MSeveri96/PALLAS/discussions). Every comment, question or suggestion is more than welcome!
+If something is unclear or for any kind of question you are encouraged to write to the maintainer of this repository (marco.severi6@unibo.it) or to post in the [Discussions section](https://github.com/MSeveri96/MANULS/discussions). Every comment, question or suggestion is more than welcome!
 
-If you spot a bug in the code (thanks!) you can post in the [Issues section](https://github.com/MSeveri96/PALLAS/issues) or write to the maintainer.
+If you spot a bug in the code (thanks!) you can post in the [Issues section](https://github.com/MSeveri96/MANULS/issues) or write to the maintainer.
