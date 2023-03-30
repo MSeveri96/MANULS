@@ -39,9 +39,9 @@ To run the the code you need to:
 
 ### Output
  
- The code produces two files: `optimal_field_and_optimal_bbp.txt` and `fields_and_bbps.txt`.
+ The code produces two files: `external_electric_fields.txt` and 'coordinates_bbps.txt`.
  
- `optimal_field_and_optimal_bbp.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, along with other data to control the quality of the result. It also contains four "sub-optimal" fields and "sub-optimal" bond breaking points. These "sub-optimal" values are not optimal but close to the optimality. 
+ `optimal_field_and_optimal_bbp.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
  `fields_and_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md).
  
