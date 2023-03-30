@@ -33,7 +33,7 @@ polar=np.loadtxt('/path/to/file_polarizability.txt')
 
 
 # "pointsx" and "pointsy" = number of points scanned for each variable
-pointsx=int(37)
+pointsx=int(number_points)
 
 
 
@@ -186,7 +186,7 @@ for idx_ge in range(len(indexes)):
 
 
 
-gradient_maxima = np.argsort(vector_norm_gradient_extr)[::1][:5]
+gradient_maxima = np.argsort(vector_norm_gradient_extr)[::1][:n_bbps]
 
 array_for_max_gradient=np.array([])
 
