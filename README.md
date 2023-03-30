@@ -31,7 +31,7 @@ For instance: `pip install numpy matplotlib`
 MANULS can be dowloaded using the `git clone` command or using the green button at the top of this page. After pressing the button you can choose "download ZIP", unzip the folder and run the code.
 
 To run the the code you need to:
-1. Have a scan of the potential energy surface, along with the dipole moment vector and the polarizability for each point of the scan
+1. Have a scan of the potential energy surface, along with the dipole moment vector and the polarizability for each point of the scan.
 2. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
 3. Unzip MANULS in a directory of your choice.
 4. Modify the file MANULS_2D.py or MANULS_1D.py files putting the correct location of the files containing your data and the scan.
@@ -41,9 +41,9 @@ To run the the code you need to:
  
  The code produces two files: `external_electric_fields.txt` and 'coordinates_bbps.txt`.
  
- `optimal_field_and_optimal_bbp.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
+`external_electric_fields.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
- `fields_and_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md).
+`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf.
  
  
 
