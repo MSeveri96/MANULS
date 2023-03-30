@@ -14,7 +14,7 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 
 ### Documentation
 
-You can find the documentation in PDF format, along with a worked example, [here](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf) in this repository 
+You can find the documentation in PDF format, along with a worked example, [here](https://github.com/MSeveri96/MANULS/MANULS_documentation.pdf) in this repository 
 
 ### Prerequisites
 
