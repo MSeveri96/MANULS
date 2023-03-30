@@ -14,7 +14,7 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 
 ### Documentation
 
-You can find the documentation, along with some examples, [here](https://github.com/MSeveri96/Optimal-external-electric-field/blob/main/Documentation/README.md) or, if you prefer, download a PDF version with this [link]
+You can find the documentation in PDF format, along with a worked example, [here](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf) in this repository 
 
 ### Prerequisites
 
