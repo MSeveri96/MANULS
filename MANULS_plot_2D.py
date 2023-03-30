@@ -23,8 +23,8 @@ matplotlib.rc('font', **font)
 
 # Loading of the files containing the data, please see the documentation
 
-data=np.loadtxt('/home/marco/huisgen/tzvp/scan_tzvp_grid.txt')
-polar=np.loadtxt('/home/marco/huisgen/tzvp/polarizability_scan_tzvp.txt')
+data=np.loadtxt('/path/to/file_grid.txt')
+polar=np.loadtxt('/path/to/file_polarizability.txt')
 
 
 
