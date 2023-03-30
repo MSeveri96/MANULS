@@ -216,7 +216,7 @@ for c in range(len(energy_column)):
     if energy[obbp_x]==energy_column[c]:
         print('Geometry of the optimal BBP',file=file_optimal)
         print('variable 1 =',data[c,0],file=file_optimal)
-        print('variable 1 =',data[c,0])
+        
         
 
 print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]],file=file_optimal)
