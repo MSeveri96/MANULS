@@ -32,7 +32,7 @@ MANULS can be dowloaded using the `git clone` command or using the green button 
 
 To run the the code you need to:
 1. Have a scan of the potential energy surface, along with the dipole moment vector and the polarizability for each point of the scan.
-2. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
+2. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/blob/a9bc45ad5813b3ade01cb010f221a83e22ff7e36/MANULS_documentation.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
 3. Unzip MANULS in a directory of your choice.
 4. Modify the file MANULS_2D.py or MANULS_1D.py files putting the correct location of the files containing your data and the scan.
 5. Run the code with `python3 MANULS_2D.py` or `python3 MANULS_1D.py`. If you prefer you can run the code in your favorite IDE as well.
@@ -43,7 +43,7 @@ To run the the code you need to:
  
 `external_electric_fields.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
-`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/MANULS_documentaton.pdf).
+`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/blob/a9bc45ad5813b3ade01cb010f221a83e22ff7e36/MANULS_documentation.pdf).
 
 We provide the `MANULS_plot_2D.py` and `MANULS_plot_1D.py` scripts to plot the results.
  
