@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
 import math
-
+import sys
 
 
 font = {'family' : 'normal',
@@ -24,16 +23,22 @@ matplotlib.rc('font', **font)
 
 # Loading of the files containing the data, please see the documentation
 
-data=np.loadtxt('/path/to/file_grid.txt')
-polar=np.loadtxt('/path/to/file_polarizability.txt')
-
-
-# "pointsx" and "pointsy" = number of points scanned for each variable
-pointsx=int(number_points)
+data=np.loadtxt('/home/marco/cumulene/scan_polar_long_grid.txt')
+polar=np.loadtxt('/home/marco/cumulene/scan_polar_long_polarizability.txt')
 
 
 
-# "step_x" and "step_y" = step size used in the scan 
+# "pointsx" =  number of points scanned 
+pointsx=int(37)
+
+
+# unit of measure of the variable. For distances choose between "angstrom" and
+# "bohr". For angles and dihedrals choose "degrees" or "radians".
+unit_variable_1='degrees'
+
+
+# "step_x" = step size used in the scan. Use the unit of measure
+#  of your scan
 step_x=5
 
 
@@ -41,8 +46,10 @@ step_x=5
 # usually the default gives a satisfactory time/precision ratio
 n_directions=100000
 
-#geometry of the reactants
-geometry_reactant_x=180
+# Geometry of the reactants. Use the unit of measure
+#  of your scan
+geometry_reactant_x=175
+
 
 
 
@@ -75,7 +82,7 @@ print('THE CODE IS WORKING...')
 f_tol=5e-5
 m_tol=0.999
 g_pert_tol=5e-5
-energy_tol=-0.0048
+energy_tol=0.0048
 n_bbps=int(5)
 
 
@@ -90,9 +97,27 @@ original_gradient_optimal_field=np.array([])
 optimal_fields=np.zeros(3)
 norm_optimal_fields=np.array([])
 
+data2=np.copy(data)
 
 
+if unit_variable_1.casefold()=='angstrom':
+    step_x=step_x*1.8897259886
+    geometry_reactant_x=geometry_reactant_x*1.8897259886
+    data[:,0]=data[:,0]*1.8897259886
 
+
+if unit_variable_1.casefold()=='degrees':
+    step_x=step_x*0.0174532925
+    geometry_reactant_x=geometry_reactant_x*0.0174532925
+    data[:,0]=data[:,0]*0.0174532925
+    
+    
+list_units=['degrees','angstrom', 'bohr','radians']
+
+if unit_variable_1.casefold() not in list_units:#or unit_variable_1.casefold()!='radians' or unit_variable_1.casefold()!='angstrom' or unit_variable_1.casefold()!='bohr'):
+    print('ERROR, ERRONEOUS UNIT OF MEASURE')
+    print('The code is trying to read the',unit_variable_1,'keyword, please check it')
+    sys.exit()
                     
             
 
@@ -102,8 +127,6 @@ norm_optimal_fields=np.array([])
 # order to implement easily the derivatives. Also in this case the ordering
 # "Fortran style" is very important. At the end the columns reprensent
 #  the x-axis, while the rows represent the y-axis
-
-
 energy=data[:,1]
 dipx=data[:,2]
 dipy=data[:,3]
@@ -195,7 +218,7 @@ for l in range(len(gradient_maxima)):
     for c in range(len(energy_column)):
         if energy[obbp_x]==energy_column[c]:
             print('Geometry of the BBP',file=file_bbps)
-            print('variable 1 =',data[c,0],file=file_bbps)
+            print('variable 1 =',data2[c,0],file=file_bbps)
             print('index BBP =',indexes[gradient_maxima[l]],file=file_bbps)
             print('gradient in this point =',gradient_pes[gradient_maxima[l]],file=file_bbps)
             print('gradient norm in this point =',norm_gradient,file=file_bbps)
@@ -215,15 +238,13 @@ obbp_x=int(obbp_idx)
 for c in range(len(energy_column)):
     if energy[obbp_x]==energy_column[c]:
         print('Geometry of the optimal BBP',file=file_optimal)
-        print('variable 1 =',data[c,0],file=file_optimal)
-        
+        print('variable 1 =',data2[c,0],file=file_optimal)
         
 
 print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]],file=file_optimal)
 print('norm original gradient',np.amax(array_for_max_gradient),file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
-exit
 
 # Now the optimal BBP is defined. The code computes the ingredients for
 # finding the optimal field. It starts computing the hessian and
@@ -429,7 +450,7 @@ for g in range(len(points)):
     
     if geometry_reactant_x!=-1000:
         
-        if np.abs(f)<f_tol and np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp))>m_tol and np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e))<g_pert_tol and energy_perturbed[row_react]-energy_perturbed[obbp_x]>energy_tol:
+        if np.abs(f)<f_tol and np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp))>m_tol and np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e))<g_pert_tol and energy_perturbed[obbp_x]<energy_perturbed[row_react]+energy_tol:
             # print(f)
             # print(np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp)))
             # print(np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e)))
@@ -526,6 +547,28 @@ for z in range(len(idx_optimal_field)):
         
         print('',file=file_optimal)
         print('',file=file_optimal)
+
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
 
 
 
