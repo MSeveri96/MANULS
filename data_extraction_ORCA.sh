@@ -1,8 +1,8 @@
 #!/bin/bash
 
-grep -A3 'raw cartesian tensor' $1.inp.out |sed '/raw/d'|sed '/--/d'> $1_polarizability.txt
+grep -A3 'raw cartesian tensor' $1.out |sed '/raw/d'|sed '/--/d'> $1_polarizability.txt
 
-grep 'Total Dipole' $1.inp.out > tmp.txt
+grep 'Total Dipole' $1.out > tmp.txt
 
 cut -d " " -f 10- tmp.txt > dipole.txt
 
