@@ -290,8 +290,7 @@ for l in range(len(gradient_maxima)):
 obbp_idx=indexes[gradient_maxima[np.argmax(array_for_max_gradient)]]
 obbp_x=int(obbp_idx[1])
 obbp_y=int(obbp_idx[0])
-obbp_x=int(14)
-obbp_y=int(15)
+
 
 
 for c in range(len(energy_column)):
