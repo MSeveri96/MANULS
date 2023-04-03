@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 13 08:48:58 2022
 
-@author: Marco Severi
-"""
 
 import sys
 import numpy as np
@@ -600,13 +596,13 @@ for g in range(len(points)):
             # print(np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp)))
             # print(np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e)))
             # print(np.linalg.norm(g_pes_obbp))
-            print('field',e)
-            print(np.linalg.norm(e))
-            # print(e/np.linalg.norm(e))
-            print('E react',energy_perturbed[row_react,column_react])
-            print('E obbp',energy_perturbed[obbp_y,obbp_x])
-            print(energy_perturbed[obbp_y,obbp_x]-energy_perturbed[row_react,column_react])
-            print('---')
+            #print('field',e)
+            #print(np.linalg.norm(e))
+            #print(e/np.linalg.norm(e))
+            #print('E react',energy_perturbed[row_react,column_react])
+            #print('E obbp',energy_perturbed[obbp_y,obbp_x])
+            #print(energy_perturbed[obbp_y,obbp_x]-energy_perturbed[row_react,column_react])
+            #print('---')
             
             # print('----')   
             
@@ -699,11 +695,6 @@ for z in range(len(idx_optimal_field)):
         print('',file=file_optimal)
 
 
-
-
-
-print(step_x,step_y)          
-print(geometry_reactant_x,geometry_reactant_y)
             
             
             
