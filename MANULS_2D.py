@@ -304,7 +304,6 @@ for c in range(len(energy_column)):
 
 
 print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]],file=file_optimal)
-print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[np.argmax(array_for_max_gradient)]])
 print('norm original gradient',np.amax(array_for_max_gradient),file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
 print('--------------------------------------------------------',file=file_optimal)
