@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+Created on Thu Oct 13 08:48:58 2022
 
+@author: Marco Severi
+"""
 
-
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib
@@ -24,15 +28,22 @@ matplotlib.rc('font', **font)
 
 # Loading of the files containing the data, please see the documentation
 
-data=np.loadtxt('/path/to/file_grid.txt')
-polar=np.loadtxt('/path/to/file_polarizability.txt')
+
+data=np.loadtxt('/home/marco/huisgen/tzvp/from_reacts/scan_tzvp_from_reacts_grid.txt')
+polar=np.loadtxt('/home/marco/huisgen/tzvp/from_reacts/polarizability_scan_tzvp_from_reacts.txt')
+
 
 # "pointsx" and "pointsy" = number of points scanned for each variable
 pointsx=int(25)
 pointsy=int(25)
 
+# unit of measure of the variables. For distances choose between "angstrom" and
+# "bohr". For angles and dihedrals choose "degrees" or "radians".
+unit_variable_1='angstrom'
+unit_variable_2='angstrom'
 
-# "step_x" and "step_y" = step size used in the scan 
+# "step_x" and "step_y" = step size used in the scan. Use the unit of measure
+#  of your scan
 step_x=0.025
 step_y=0.025
 
@@ -40,10 +51,11 @@ step_y=0.025
 # usually the default gives a satisfactory time/precision ratio
 n_directions=100000
 
-#geometry of the reactants
+# Geometry of the reactants. Use the unit of measure
+#  of your scan
 geometry_reactant_x=3.5
 geometry_reactant_y=3.5
-
+ 
 
     
 
@@ -74,7 +86,7 @@ print('THE CODE IS WORKING...')
 f_tol=5e-5
 m_tol=0.999
 g_pert_tol=5e-5
-energy_tol=-0.0048
+energy_tol=0.0048
 n_bbps=int(5)
 
 indexes=np.zeros(2)
@@ -88,12 +100,41 @@ original_gradient_optimal_field=np.zeros(2)
 optimal_fields=np.zeros(3)
 norm_optimal_fields=np.array([])
 
+data2=np.copy(data)
+              
+
+if unit_variable_1.casefold()=='angstrom':
+    step_x=step_x*1.8897259886
+    geometry_reactant_x=geometry_reactant_x*1.8897259886
+    data[:,0]=data[:,0]*1.8897259886
+
+if unit_variable_2.casefold()=='angstrom':
+    step_y=step_y*1.8897259886
+    geometry_reactant_y=geometry_reactant_y*1.8897259886
+    data[:,1]=data[:,1]*1.8897259886
 
 
-                    
-            
+if unit_variable_1.casefold()=='degrees':
+    step_x=step_x*0.0174532925
+    geometry_reactant_x=geometry_reactant_x*0.0174532925
+    data[:,0]=data[:,0]*0.0174532925
+    
+if unit_variable_2.casefold()=='degrees':
+    step_y=step_y*0.0174532925
+    geometry_reactant_y=geometry_reactant_y*0.0174532925
+    data[:,1]=data[:,1]*0.0174532925
+    
+list_units=['degrees','angstrom', 'bohr','radians']
 
+if unit_variable_1.casefold() not in list_units:#or unit_variable_1.casefold()!='radians' or unit_variable_1.casefold()!='angstrom' or unit_variable_1.casefold()!='bohr'):
+    print('ERROR, ERRONEOUS UNIT OF MEASURE')
+    print('The code is trying to read the',unit_variable_1,'keyword, please check it')
+    sys.exit()
 
+if unit_variable_2.casefold() not in list_units:#or unit_variable_1.casefold()!='radians' or unit_variable_1.casefold()!='angstrom' or unit_variable_1.casefold()!='bohr'):
+    print('ERROR, ERRONEOUS UNIT OF MEASURE')
+    print('The code is trying to read the',unit_variable_1,'keyword, please check it')
+    sys.exit()
 
 # Starting from the data written in columns I rearrange them in matrices, in 
 # order to implement easily the derivatives. Also in this case the ordering
@@ -232,12 +273,13 @@ for l in range(len(gradient_maxima)):
     for c in range(len(energy_column)):
         if energy[obbp_y,obbp_x]==energy_column[c]:
             print('Geometry of the BBP',file=file_bbps)
-            print('variable 1 =',data[c,0],file=file_bbps)
-            print('variable 2 =',data[c,1],file=file_bbps)
+            print('variable 1 =',data2[c,0],file=file_bbps)
+            print('variable 2 =',data2[c,1],file=file_bbps)
             print('index BBP =',indexes[gradient_maxima[l]],file=file_bbps)
-            print('norm gradient in this point=',norm_gradient,file=file_bbps)
-            print('gradient in this point',gradient_pes[gradient_maxima[l]],file=file_bbps)
-            print('gradient extremal condition',vector_norm_gradient_extr[gradient_maxima[l]],file=file_bbps)
+            print('gradient in this point =',gradient_pes[gradient_maxima[l]],file=file_bbps)
+            print('gradient norm in this point =',norm_gradient,file=file_bbps)
+            
+            print('gradient extremal condition =',vector_norm_gradient_extr[gradient_maxima[l]],file=file_bbps)
             print('#########',file=file_bbps)
             print('',file=file_bbps)
             print('',file=file_bbps)
@@ -248,14 +290,15 @@ for l in range(len(gradient_maxima)):
 obbp_idx=indexes[gradient_maxima[np.argmax(array_for_max_gradient)]]
 obbp_x=int(obbp_idx[1])
 obbp_y=int(obbp_idx[0])
-
+obbp_x=int(14)
+obbp_y=int(15)
 
 
 for c in range(len(energy_column)):
     if energy[obbp_y,obbp_x]==energy_column[c]:
         print('Geometry of the optimal BBP',file=file_optimal)
-        print('variable 1 =',data[c,0],file=file_optimal)
-        print('variable 2 =',data[c,1],file=file_optimal)
+        print('variable 1 =',data2[c,0],file=file_optimal)
+        print('variable 2 =',data2[c,1],file=file_optimal)
         # print('Geometry of the optimal BBP')
         # print('variable 1 =',data[c,0])
         # print('variable 2 =',data[c,1])
@@ -547,22 +590,25 @@ for g in range(len(points)):
 #  The code computes the energy perturbed by the fied and 
 #  performs the test (see documentation for further details)
 
-    for idx_p_y in range(int(pointsy)):
-        for idx_p_x in range(int(pointsx)):
+    for idx_p_y in range(pointsy):
+        for idx_p_x in range(pointsx):
             energy_perturbed[idx_p_y,idx_p_x]=energy[idx_p_y,idx_p_x]-(dipx[idx_p_y,idx_p_x]*e[0]+dipy[idx_p_y,idx_p_x]*e[1]+dipz[idx_p_y,idx_p_x]*e[2])-(1/2)*e[0]*(e[0]*a00[idx_p_y,idx_p_x]+e[1]*a01[idx_p_y,idx_p_x]+e[2]*a02[idx_p_y,idx_p_x])-(1/2)*e[1]*(e[0]*a10[idx_p_y,idx_p_x]+e[1]*a11[idx_p_y,idx_p_x]+e[2]*a12[idx_p_y,idx_p_x])-(1/2)*e[2]*(e[0]*a20[idx_p_y,idx_p_x]+e[1]*a21[idx_p_y,idx_p_x]+e[2]*a22[idx_p_y,idx_p_x])
-            
+
     
     if geometry_reactant_x!=-1000:
         
-        if np.abs(f)<f_tol and np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp))>m_tol and np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e))<g_pert_tol and energy_perturbed[row_react,column_react]-energy_perturbed[obbp_y,obbp_x]>energy_tol:
+        if np.abs(f)<f_tol and np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp))>m_tol and np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e))<g_pert_tol and energy_perturbed[obbp_y,obbp_x]<(energy_perturbed[row_react,column_react]+energy_tol):
             # print(f)
             # print(np.abs(np.dot(m,e)/np.linalg.norm(g_pes_obbp)))
             # print(np.linalg.norm(g_pes_obbp-np.dot(matrix_of_gradients,e)))
             # print(np.linalg.norm(g_pes_obbp))
-            # print('field',e)
-            # print(np.linalg.norm(e))
+            print('field',e)
+            print(np.linalg.norm(e))
             # print(e/np.linalg.norm(e))
-            # print('pert function', energy_perturbed[obbp_y,obbp_x]-energy[obbp_y,obbp_x])
+            print('E react',energy_perturbed[row_react,column_react])
+            print('E obbp',energy_perturbed[obbp_y,obbp_x])
+            print(energy_perturbed[obbp_y,obbp_x]-energy_perturbed[row_react,column_react])
+            print('---')
             
             # print('----')   
             
@@ -658,10 +704,8 @@ for z in range(len(idx_optimal_field)):
 
 
 
-            
-            
-            
-            
+print(step_x,step_y)          
+print(geometry_reactant_x,geometry_reactant_y)
             
             
             
