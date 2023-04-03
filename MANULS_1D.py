@@ -497,9 +497,6 @@ idx_optimal_field=np.argsort(norm_optimal_fields,kind='stable')
 
 for z in range(len(idx_optimal_field)):
     if z==0:
-        print('Results:')
-        print('')
-        print('')
         print('Optimal electric field (a.u.)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:],file=file_optimal)
         print('Amplitude of the optimal electric field (a.u.)',file=file_optimal)
