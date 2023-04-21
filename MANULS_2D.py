@@ -127,9 +127,9 @@ if unit_variable_1.casefold() not in list_units:#or unit_variable_1.casefold()!=
     print('The code is trying to read the',unit_variable_1,'keyword, please check it')
     sys.exit()
 
-if unit_variable_2.casefold() not in list_units:#or unit_variable_1.casefold()!='radians' or unit_variable_1.casefold()!='angstrom' or unit_variable_1.casefold()!='bohr'):
+if unit_variable_2.casefold() not in list_units:#or unit_variable_2.casefold()!='radians' or unit_variable_2.casefold()!='angstrom' or unit_variable_2.casefold()!='bohr'):
     print('ERROR, ERRONEOUS UNIT OF MEASURE')
-    print('The code is trying to read the',unit_variable_1,'keyword, please check it')
+    print('The code is trying to read the',unit_variable_2,'keyword, please check it')
     sys.exit()
 
 # Starting from the data written in columns I rearrange them in matrices, in 
