@@ -1,0 +1,9 @@
+@software{manuls,
+  author = {Bofill Villà, Josep Marian and Quapp, Wolfgang and Ribas-Ariño, Jordi and Severi, Marco},
+  doi = {10.5281/zenodo.1234},
+  month = {12},
+  title = {{My Research Software}},
+  url = {https://github.com/github-linguist/linguist},
+  version = {2.0.4},
+  year = {2017}
+}
