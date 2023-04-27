@@ -1,4 +1,4 @@
-# MANULS (Make chemicAl reactioNs spontaoUs via optimaL fieldS)
+# MANULS (Make chemicAl reactioNs spontaneoUs via optimaL fieldS)
 
 
 <div align="center">
