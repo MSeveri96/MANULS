@@ -378,11 +378,11 @@ for g in range(len(points)):
     
     matrix_of_gradients=grad_T_dipole+(1/2)*E*grad_T_fe
     
-    D=np.matmul(grad_T_dipole.transpose(),grad_T_dipole)
+    D_tmp=np.matmul(grad_T_dipole.transpose(),grad_T_dipole)
     normalized_gradient_obbp=g_pes_obbp/np.linalg.norm(g_pes_obbp)
     
     m=np.dot(matrix_of_gradients,normalized_gradient_obbp)
-    D_bar=D-np.outer(m,m)
+    D=D_tmp-np.outer(m,m)
     
 
     proj_obbp=1
@@ -423,7 +423,7 @@ for g in range(len(points)):
 
 # All the ingredients are ready. The code computes the f function   
     
-    tmp_eq1=np.dot(e,D_bar)
+    tmp_eq1=np.dot(e,D)
     tmp_eq_3_1=np.dot(e,T)
     tmp_eq_3_2=np.dot(v_vec,v_vec)+v_italic**2
     
