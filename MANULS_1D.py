@@ -400,36 +400,36 @@ for g in range(len(points)):
     ty=np.dot(My,g_pes_obbp)
     tz=np.dot(Mz,g_pes_obbp)
     
-    wx=np.dot(g_pes_obbp,tx)
-    wy=np.dot(g_pes_obbp,ty)
-    wz=np.dot(g_pes_obbp,tz)
-    w_vec=np.array([wx,wy,wz])
+    zx=np.dot(g_pes_obbp,tx)
+    zy=np.dot(g_pes_obbp,ty)
+    zz=np.dot(g_pes_obbp,tz)
+    z_vec=np.array([zx,zy,zz])
     
     
     
     
-    Z2=np.zeros((3,3))
+    T=np.zeros((3,3))
     
-    Z2[0,0]=np.dot(tx,tx)
-    Z2[0,1]=np.dot(tx,ty)
-    Z2[0,2]=np.dot(tx,tz)
-    Z2[1,0]=np.dot(ty,tx)
-    Z2[1,1]=np.dot(ty,ty)
-    Z2[1,2]=np.dot(ty,tz)
-    Z2[2,0]=np.dot(tz,tx)
-    Z2[2,1]=np.dot(tz,ty)
-    Z2[2,2]=np.dot(tz,tz)
+    T[0,0]=np.dot(tx,tx)
+    T[0,1]=np.dot(tx,ty)
+    T[0,2]=np.dot(tx,tz)
+    T[1,0]=np.dot(ty,tx)
+    T[1,1]=np.dot(ty,ty)
+    T[1,2]=np.dot(ty,tz)
+    T[2,0]=np.dot(tz,tx)
+    T[2,1]=np.dot(tz,ty)
+    T[2,2]=np.dot(tz,tz)
     
 
 # All the ingredients are ready. The code computes the f function   
     
     tmp_eq1=np.dot(e,D_bar)
-    tmp_eq_3_1=np.dot(e,Z2)
+    tmp_eq_3_1=np.dot(e,T)
     tmp_eq_3_2=np.dot(v_vec,v_vec)+v_italic**2
     
     b=np.array([0,v_italic,tmp_eq_3_2])
     
-    tmp_B=np.row_stack((tmp_eq1,w_vec))
+    tmp_B=np.row_stack((tmp_eq1,z_vec))
     B=np.row_stack((tmp_B,tmp_eq_3_1))
     
     tmp_f_1=np.matmul(e.transpose(),B)
