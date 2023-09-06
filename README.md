@@ -16,9 +16,9 @@ MANULS computes the smallest electric field that removes the energy barrier betw
 The following figures show one prototypical application of MANULS. The code starts from a potential energy curve computed without any field effecs, in vacuo (on the left). In this case the blue curve describes a trans-to-cis isomerization, that is the reactants are on the right of the blue curve. The application of MANULS on the blue curve gives an external electric field that transforms the blue curve into the orange one. In other words the external electric field computed by MANULS is able to remove the reaction barrier and catalyze the reaction. 
 
 
-| Without Field                | With Field                          |
+| Without Electric Field                | With Electric Field                          |
 | ----------------------------------- | ----------------------------------- |
-| ![cat](https://github.com/MSeveri96/MANULS/blob/main/original_pes.png) | ![dog](https://github.com/MSeveri96/MANULS/blob/main/perturbed_pes_polar.png) |
+| ![no_field](https://github.com/MSeveri96/MANULS/blob/main/original_pes.png) | ![field](https://github.com/MSeveri96/MANULS/blob/main/perturbed_pes_polar.png) |
 
 
 ## Jump-Start Guide 
