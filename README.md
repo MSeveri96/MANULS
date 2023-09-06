@@ -12,7 +12,8 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 
 ## Capabilities
 MANULS computes the smallest electric field that removes the energy barrier between the reactants and the transition state of a chemical reaction. At the moment the code work with potential energy curves and 2-D potential energy surfaces. 
-The following figures show one prototypical application of MANULS. The code starts from a potential energy curve computed without any field effecs, in vacuo (on the left). In this case the blue curve describes a trans-to-cis isomerization. 
+
+The following figures show one prototypical application of MANULS. The code starts from a potential energy curve computed without any field effecs, in vacuo (on the left). In this case the blue curve describes a trans-to-cis isomerization. The application of MANULS on the blue curve gives an external electric field that transforms the blue curve into the orange one. In other words the external electric field computed by MANULS is able to remove the reaction barrier and catalyze the reaction. 
 
 
 | Without Field                | With Field                          |
