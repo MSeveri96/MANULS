@@ -10,6 +10,12 @@ A program to calculate the smallest electric field that makes a chemical reactio
 
 This first version of the code works with 1-D and  2-D scans of the potential energy surface. A script is provided to extract the relevant data from ORCA relaxed scan calculations.
 
+## Capabilities
+| Cat pics                            | Dog pics                            |
+| ----------------------------------- | ----------------------------------- |
+| ![cat](https://example.com/cat.png) | ![dog](https://example.com/dog.png) |
+
+
 ## Jump-Start Guide 
 
 ### Documentation
