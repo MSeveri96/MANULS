@@ -13,7 +13,7 @@ This first version of the code works with 1-D and  2-D scans of the potential en
 ## Capabilities
 | Cat pics                            | Dog pics                            |
 | ----------------------------------- | ----------------------------------- |
-| [cat](https://github.com/MSeveri96/MANULS/blob/main/original_pes.pdf) | [dog](https://github.com/MSeveri96/MANULS/blob/main/perturbed_pes_polar.pdf) |
+| (https://github.com/MSeveri96/MANULS/blob/main/original_pes.pdf) | (https://github.com/MSeveri96/MANULS/blob/main/perturbed_pes_polar.pdf) |
 
 
 ## Jump-Start Guide 
