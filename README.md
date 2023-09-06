@@ -11,7 +11,8 @@ A program to calculate the smallest electric field that makes a chemical reactio
 This first version of the code works with 1-D and  2-D scans of the potential energy surface. A script is provided to extract the relevant data from ORCA relaxed scan calculations.
 
 ## Capabilities
-MANULS computes the smallest electric field that removes the energy barrier between the reactants and the transition state of a chemical reaction.
+MANULS computes the smallest electric field that removes the energy barrier between the reactants and the transition state of a chemical reaction. At the moment the code work with potential energy curves and 2-D potential energy surfaces. 
+The following figures show one prototypical application of MANULS. The code starts from a potential energy curve computed without any field effecs, in vacuo (on the left). In this case the blue curve describes a trans-to-cis isomerization. 
 
 
 | Without Field                | With Field                          |
