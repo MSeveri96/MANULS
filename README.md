@@ -61,7 +61,7 @@ We provide the `MANULS_plot_2D.py` and `MANULS_plot_1D.py` scripts to plot the r
  
 
 ## Citation
-The main publication related to MANULS is \fullcite{bofill_jcp}. \\
+The main publication related to MANULS is "An algorithm to find the optimal oriented external electrostatic field for annihilating a reaction barrier in a polarizable molecular system", J. Chem. Phys. 159, 114112 (2023). \\
 The user is encouraged to cite this paper whenever results are obtained with the MANULS program. \cite{bofill_jcp} is also the reference from which the description of the model is taken. Other works regarding the optimal bond-breaking point and the optimal external electric field are
 1. Josep Maria Bofill, Wolfgang Quapp, Guillermo Albareda, Ibério de P. R. Moreira, and Jordi Ribas-Ariño
 Journal of Chemical Theory and Computation 2022 18 (2), 935-952
