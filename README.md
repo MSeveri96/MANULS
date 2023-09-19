@@ -6,7 +6,7 @@
 </div>
 
 
-A program to calculate the smallest electric field that makes a chemical reaction barrierless.
+A program to calculate the smallest electric field that makes a chemical reaction barrierless. In other words: with MANULS it is possible to compute the external electric field that enables the perfect catalysis of a chemical reaction.
 
 This first version of the code works with 1-D and  2-D scans of the potential energy surface. A script is provided to extract the relevant data from ORCA relaxed scan calculations.
 
