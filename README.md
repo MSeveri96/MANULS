@@ -25,7 +25,7 @@ The following figures show one prototypical application of MANULS. The code star
 
 ### Documentation
 
-You can find the documentation in PDF format, along with a worked example, [here](https://github.com/MSeveri96/MANULS/blob/a9bc45ad5813b3ade01cb010f221a83e22ff7e36/MANULS_documentation.pdf) in this repository 
+You can find the documentation in PDF format, along with a worked example, [here](https://github.com/MSeveri96/MANULS/blob/main/MANULS_documentation.pdf) in this repository 
 
 ### Prerequisites
 
@@ -54,7 +54,7 @@ To run the the code you need to:
  
 `external_electric_fields.txt` contains, at its top, the coordinates of the optimal bond-breaking-point and the optimal external electric field, the optimal external electric field is the field with the smallest amplitude capable of removing the energy barrier of a chemical reaction.
  
-`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/blob/a9bc45ad5813b3ade01cb010f221a83e22ff7e36/MANULS_documentation.pdf).
+`coordinates_bbps.txt` is mainly for the interested user and for debugging purposes. More information is available in the [documentation](https://github.com/MSeveri96/MANULS/blob/main/MANULS_documentation.pdf).
 
 We provide the `MANULS_plot_2D.py` and `MANULS_plot_1D.py` scripts to plot the results.
  
