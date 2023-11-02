@@ -43,7 +43,7 @@ MANULS can be dowloaded using the `git clone` command or using the green button 
 
 To run the the code you need to:
 1. Have a scan of the potential energy surface, along with the dipole moment vector and the polarizability for each point of the scan.
-2. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/blob/a9bc45ad5813b3ade01cb010f221a83e22ff7e36/MANULS_documentation.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
+2. Prepare the data for the code (see the [documentation](https://github.com/MSeveri96/MANULS/blob/main/MANULS_documentation.pdf)). We provide a script to automatically extract the data from a ORCA calculation.
 3. Unzip MANULS in a directory of your choice.
 4. Modify the file MANULS_2D.py or MANULS_1D.py files putting the correct location of the files containing your data and the scan.
 5. Run the code with `python3 MANULS_2D.py` or `python3 MANULS_1D.py`. If you prefer you can run the code in your favorite IDE as well.
