@@ -68,6 +68,7 @@ The user is encouraged to cite this paper whenever results are obtained with the
 Journal of Chemical Theory and Computation 2022 18 (2), 935-952
 DOI: 10.1021/acs.jctc.1c00943 
 2. Bofill, J.M., Quapp, W., Albareda, G. et al. A catastrophe theory-based model for optimal control of chemical reactions by means of oriented electric fields. Theor Chem Acc 142, 22 (2023). https://doi.org/10.1007/s00214-023-02959-0
+3. Josep Maria Bofill, Marco Severi, Wolfgang Quapp, Jordi Ribas-Ariño, Ibério de P. R. Moreira, Guillermo Albareda. Optimal oriented external electric elds to trigger a barrierless oxaphosphetane ring opening step of the Wittig reaction. Chem. Eur. J. 2024, e202400173. https://doi.org/10.1002/chem.202400173
 
 
 ## Questions?
