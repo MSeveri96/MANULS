@@ -10,9 +10,7 @@ import math
 
 
 
-font = {'family' : 'normal',
-        'weight' : 'normal',
-        'size'   :  14}
+font = {'size'   :  14}
 
 matplotlib.rc('font', **font)
 
@@ -638,9 +636,9 @@ optimal_fields = np.delete(optimal_fields, (0), axis=0)
 # the fields that met the requirements. Now it picks the field with the 
 # lowest amplitude as optimal.
 
-
 idx_optimal_field=np.argsort(norm_optimal_fields,kind='stable')
 
+ordered_optimal_fields=np.zeros(3)
 for z in range(len(idx_optimal_field)):
     if z==0:
         print('Results:',file=file_optimal)
@@ -649,17 +647,17 @@ for z in range(len(idx_optimal_field)):
         print('Optimal electric field (a.u.)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:],file=file_optimal)
         print('Amplitude of the optimal electric field (a.u.)',file=file_optimal)
-        
+
         print(norm_optimal_fields[idx_optimal_field[z]],file=file_optimal)
         print('Direction of the optimal electric field',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:]/norm_optimal_fields[idx_optimal_field[z]],file=file_optimal)
-        
+
         print('Optimal electric field (V/m)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:]* 5.14220826*10**11,file=file_optimal)
-        
+
         print('Amplitude of the optimal electric field (V/m)',file=file_optimal)
         print('{:.4e}'.format(norm_optimal_fields[idx_optimal_field[z]]* 5.14220826*10**11),file=file_optimal)
-        
+
         print('Original Gradient',file=file_optimal)
         print(original_gradient_optimal_field[idx_optimal_field[z],:],file=file_optimal)
         print('Perturbed Gradient',file=file_optimal)
@@ -669,30 +667,38 @@ for z in range(len(idx_optimal_field)):
         print('------------------------',file=file_optimal)
         print('',file=file_optimal)
         print('',file=file_optimal)
+        ordered_optimal_fields=np.vstack((ordered_optimal_fields,optimal_fields[idx_optimal_field[z],:]))
     if z>0:
         print('Sub-optimal electric field (a.u.)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:],file=file_optimal)
         print('Amplitude of the sub-optimal electric field (a.u.)',file=file_optimal)
-        
+
         print(norm_optimal_fields[idx_optimal_field[z]],file=file_optimal)
         print('Direction of the sub-optimal electric field',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:]/norm_optimal_fields[idx_optimal_field[z]],file=file_optimal)
-        
+
         print('Sub-optimal electric field (V/m)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:]* 5.14220826*10**11,file=file_optimal)
-        
+
         print('Amplitude of the sub-optimal electric field (V/m)',file=file_optimal)
         print('{:.4e}'.format(norm_optimal_fields[idx_optimal_field[z]]* 5.14220826*10**11),file=file_optimal)
-        
+
         print('Original Gradient',file=file_optimal)
         print(original_gradient_optimal_field[idx_optimal_field[z],:],file=file_optimal)
         print('Perturbed Gradient',file=file_optimal)
         print(perturbed_gradient_optimal_fields[idx_optimal_field[z],:],file=file_optimal)
         print('f Function',file=file_optimal)
         print(optimal_f[idx_optimal_field[z]],file=file_optimal)
-        
+
         print('',file=file_optimal)
         print('',file=file_optimal)
+        ordered_optimal_fields=np.vstack((ordered_optimal_fields,optimal_fields[idx_optimal_field[z],:]))
+
+
+ordered_optimal_fields = np.delete(ordered_optimal_fields, (0), axis=0)
+np.savetxt('array_fields.txt',ordered_optimal_fields)
+
+
 
 
             
