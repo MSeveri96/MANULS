@@ -9,9 +9,7 @@ import matplotlib
 
 
 
-font = {'family' : 'normal',
-        'weight' : 'normal',
-        'size'   :  14}
+font = {'size'   :  14}
 
 matplotlib.rc('font', **font)
 
