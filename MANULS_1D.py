@@ -9,9 +9,7 @@ import math
 import sys
 
 
-font = {'family' : 'normal',
-        'weight' : 'normal',
-        'size'   :  14}
+font = {'size'   :  14}
 
 matplotlib.rc('font', **font)
 
@@ -491,9 +489,9 @@ optimal_fields = np.delete(optimal_fields, (0), axis=0)
 # The code did the things above for all the "n_directions" and stored all
 # the fields that met the requirements. Now it picks the field with the 
 # lowest amplitude as optimal.
-
-
 idx_optimal_field=np.argsort(norm_optimal_fields,kind='stable')
+
+ordered_optimal_fields=np.zeros(3)
 
 for z in range(len(idx_optimal_field)):
     if z==0:
@@ -520,6 +518,7 @@ for z in range(len(idx_optimal_field)):
         print('------------------------',file=file_optimal)
         print('',file=file_optimal)
         print('',file=file_optimal)
+        ordered_optimal_fields=np.vstack((ordered_optimal_fields,optimal_fields[idx_optimal_field[z],:]))
     if z>0:
         print('Sub-optimal electric field (a.u.)',file=file_optimal)
         print(optimal_fields[idx_optimal_field[z],:],file=file_optimal)
@@ -544,9 +543,11 @@ for z in range(len(idx_optimal_field)):
         
         print('',file=file_optimal)
         print('',file=file_optimal)
+        ordered_optimal_fields=np.vstack((ordered_optimal_fields,optimal_fields[idx_optimal_field[z],:]))
 
 
-
+ordered_optimal_fields = np.delete(ordered_optimal_fields, (0), axis=0)
+np.savetxt('array_fields.txt',ordered_optimal_fields)
 
 
             
